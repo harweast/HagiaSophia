@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     {{idParameter}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<!--<ion-tabs>
+  <ion-tab [root]="tabRootGallery" tabTitle="Galeri" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tabRootDetail" tabTitle="Detay" tabIcon="information-circle"></ion-tab>
+</ion-tabs>-->
+<page-unitGallery *ngIf="isGalleryVisible"></page-unitGallery>
+<page-unitText *ngIf="!isGalleryVisible"></page-unitText>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-grid>
+    <ion-row id="xx">
+      <ion-col><ion-icon name="play"></ion-icon></ion-col>
+      <ion-col><ion-icon name="pause"></ion-icon></ion-col>
+      <ion-col></ion-col>
+      <ion-col></ion-col>
+      <ion-col><ion-icon [name]="infoToggle" (click)="openDetail()"></ion-icon></ion-col>
+    </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
