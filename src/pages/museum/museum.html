@@ -6,15 +6,38 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <div>
-    <img src="http://ayasofyamuzesi.gov.tr/sites/default/files/1_2_0.png" />
+<ion-content>
+  <div id="div-outer">
+    <div id="div-image">
+      <ion-slides pager>  
+        <ion-slide *ngFor="let image of museumInfo.images">
+          <img src="{{ image.source }}" class="slide-image"/>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div id="div-other-info">
+      <div id="div-other-info-top">
+        <div class="div-top-part">
+          <div class="div-icon">
+            <ion-icon ios="md-map" md="md-map" class="icon-top"></ion-icon>
+          </div>
+          <div class="vertical-align">
+            {{ museumInfo.location }}
+          </div>
+        </div>
+        <div class="div-top-part">
+          <div class="div-icon">
+            <ion-icon ios="md-time" md="md-time" class="icon-top"></ion-icon>
+          </div>
+          <div class="vertical-align">
+            {{ museumInfo.openTimes }}
+          </div>
+        </div>
+      </div>
+      <div #museumDescription id="div-description">
+        <!--{{ museumInfo.description }}-->
+      </div>
+      <button ion-button (click)="goToUnits()" class="button-units">Birimler</button>
+    </div>
   </div>
-  <div>
-    İstanbul, Türkiye.
-  </div>
-  <div>
-    Ayasofya (Yunanca: Aγία Σοφία, tam adı: Ναός τῆς Ἁγίας τοῦ Θεοῦ Σοφίας, Latince: Sancta Sophia ya da Sancta Sapientia), İstanbul'da tarihî bir müze. Bizans İmparatoru I. Jüstinyen tarafından, 532-537 yılları arasında İstanbul'un tarihi yarımadasındaki eski şehir merkezine inşa ettirilmiş bazilika planlı bir patrik katedrali olup, 1453 yılında İstanbul'un Osmanlılar tarafından alınmasından sonra, Fatih Sultan Mehmet tarafından camiye dönüştürülmüştür. 1935 yılından beri ise müze olarak hizmet vermektedir.[2] Ayasofya, mimari bakımdan, bazilika planı ile merkezî planı birleştiren, kubbeli bazilika tipinde bir yapı olup kubbe geçişi ve taşıyıcı sistem özellikleriyle mimarlık tarihinde önemli bir dönüm noktası olarak ele alınır.
-  </div>
-  <button ion-button (click)="goToUnits()">Birimler</button>
 </ion-content>

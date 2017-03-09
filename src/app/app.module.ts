@@ -7,6 +7,7 @@ import { UnitGalleryPage } from '../pages/unitGallery/unitGallery';
 import { UnitsPage } from '../pages/units/units';
 import { UnitTextPage } from '../pages/unitText/unitText';
 import { MuseumPage } from '../pages/museum/museum';
+import { AppService } from '../services/app.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,6 @@ import { MuseumPage } from '../pages/museum/museum';
     UnitTextPage,
     MuseumPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [AppService, { provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
 export class AppModule { }
