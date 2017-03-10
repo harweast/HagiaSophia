@@ -9,35 +9,37 @@
 <ion-content>
   <div id="div-outer">
     <div id="div-image">
-      <ion-slides pager>  
+      <ion-slides pager>
         <ion-slide *ngFor="let image of museumInfo.images">
-          <img src="{{ image.source }}" class="slide-image"/>
+          <img src="{{ image.source }}" class="slide-image" />
         </ion-slide>
       </ion-slides>
     </div>
-    <div id="div-other-info">
+    <div id="div-other-info"> 
       <div id="div-other-info-top">
-        <div class="div-top-part">
-          <div class="div-icon">
-            <ion-icon ios="md-map" md="md-map" class="icon-top"></ion-icon>
-          </div>
-          <div class="vertical-align">
-            {{ museumInfo.location }}
-          </div>
+        <div class="top-header">
+          <ion-icon ios="md-map" md="md-map" class="icon-top"></ion-icon>
+          {{ museumInfo.location }}
         </div>
-        <div class="div-top-part">
-          <div class="div-icon">
-            <ion-icon ios="md-time" md="md-time" class="icon-top"></ion-icon>
-          </div>
-          <div class="vertical-align">
-            {{ museumInfo.openTimes }}
-          </div>
+        <div class="top-header-2">
+          <ion-icon ios="md-time" md="md-time" class="icon-top"></ion-icon>
+          {{ museumInfo.openTimes }}
+        </div> 
+        <div class="top-header-3">
+          <ion-icon ios="ios-call" md="ios-call" class="icon-top"></ion-icon>
+          {{ museumInfo.phone }}
+        </div> 
+        <div class="top-header-3">
+          <ion-icon ios="ios-pricetag" md="ios-pricetag" class="icon-top"></ion-icon>
+          {{ museumInfo.price }}
         </div>
       </div>
       <div #museumDescription id="div-description">
-        <!--{{ museumInfo.description }}-->
+        <!--{{ museumInfo.description }}--> 
       </div>
-      <button ion-button (click)="goToUnits()" class="button-units">Birimler</button>
+      <div style="padding: 10px;">
+        <button ion-button full (click)="goToUnits()" class="button-units">Birimler</button>
+      </div>
     </div>
   </div>
 </ion-content>

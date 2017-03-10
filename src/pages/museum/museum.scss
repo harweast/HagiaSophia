@@ -11,29 +11,36 @@ page-museum {
   #div-other-info {
     display: flex;
     flex-direction: column;
-    padding: 5px 10px 10px 10px;
+    //padding: 5px 10px 10px 10px;
   }
   #div-other-info-top {
     display: flex;
     flex-direction: column;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #CDC5B4;
-    padding: 5px 10px 5px 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #e5e5e5;
+    padding: 5px 25px 15px 25px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+  }
+  #div-other-info-top div {
+    margin-top: 5px;
   }
   #div-description {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #CDC5B4;
-    margin-top: 10px;
-    padding: 10px;
-    color: #3F4045;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #e5e5e5;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    padding: 15px 25px 25px 25px;
+    color: #a1aab3;
   }
   .button-units {
-    background-color: #85756E;
+    background-color: #b89981;
+    border-radius: 2px!important;
   }
   .button-ios.activated {
-    background-color: #af9b93;
+    background-color: #b89981;
   }
   .div-top-part {
     display: flex;
@@ -42,8 +49,9 @@ page-museum {
     width: 35px;
   }
   .icon-top {
-    font-size: 2.2em;
+    font-size: 20px;
     color: #39393c;
+    margin-right: 5px;
   }
   .vertical-align {
     align-self: center;
@@ -75,5 +83,17 @@ page-museum {
     width: 400px;
     background-color: #f0f0f0;
     margin: 10px;
+  }
+  .top-header {
+    color: #5c6773;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .top-header-2 {
+    color: #b89981;
+  }
+  .top-header-3 {
+    color: #a1aab3;
+    font-size: 14px;
   }
 }

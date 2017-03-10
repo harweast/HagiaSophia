@@ -17,7 +17,7 @@ export class MuseumPage {
 
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit() { 
     let divElement = this.museumDescription.nativeElement;
     var showChar = 500;
     var ellipsestext = "...";
