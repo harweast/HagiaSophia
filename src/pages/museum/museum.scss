@@ -39,6 +39,17 @@ page-museum {
     background-color: #b89981;
     border-radius: 2px!important;
   }
+  .button-showPrices {
+    background-color: transparent;
+     box-shadow: none !important;
+     border-color: rgba(0,0,0,0) !important;
+    outline: none !important;
+  
+  } .icon-showPrices {
+    color:black;
+      font-size: 20px;
+    padding-bottom: 10px;
+  }
   .button-ios.activated {
     background-color: #b89981;
   }
@@ -53,6 +64,7 @@ page-museum {
     color: #39393c;
     margin-right: 5px;
   }
+ 
   .vertical-align {
     align-self: center;
   }
