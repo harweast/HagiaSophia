@@ -15,7 +15,7 @@
         </ion-slide>
       </ion-slides>
     </div>
-    <div id="div-other-info"> 
+    <div id="div-other-info">
       <div id="div-other-info-top">
         <div class="top-header">
           <ion-icon ios="md-map" md="md-map" class="icon-top"></ion-icon>
@@ -24,11 +24,11 @@
         <div class="top-header-2">
           <ion-icon ios="md-time" md="md-time" class="icon-top"></ion-icon>
           {{ museumInfo.openTimes }}
-        </div> 
+        </div>
         <div class="top-header-3">
           <ion-icon ios="ios-call" md="ios-call" class="icon-top"></ion-icon>
           {{ museumInfo.phone }}
-        </div> 
+        </div>
         <div class="top-header-3">
           <ion-icon ios="ios-pricetag" md="ios-pricetag" class="icon-top"></ion-icon>
           {{ museumInfo.price }}
@@ -38,11 +38,13 @@
         </div>
       </div>
       <div #museumDescription id="div-description">
-        <!--{{ museumInfo.description }}--> 
-      </div>
-      <div style="padding: 10px;">
-        <button ion-button full (click)="goToUnits()" class="button-units">Birimler</button>
+        <!--{{ museumInfo.description }}-->
       </div>
     </div>
   </div>
 </ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar position="bottom">
+    <button ion-button full (click)="goToUnits()" class="button-units">Birimler</button>
+  </ion-toolbar>
+</ion-footer>
