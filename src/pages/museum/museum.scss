@@ -4,6 +4,8 @@ page-museum {
   #div-outer {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
   }
   #div-image {
     height: 200px;
@@ -11,17 +13,19 @@ page-museum {
   #div-other-info {
     display: flex;
     flex-direction: column;
+    height: 100%;
     //padding: 5px 10px 10px 10px;
   }
   #div-other-info-top {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #e5e5e5;
-    padding: 5px 25px 15px 25px;
+    padding: 5px 25px 5px 25px;
     border-left-width: 0px;
     border-right-width: 0px;
+    // height: 200px;
   }
   #div-other-info-top div {
     margin-top: 5px;
@@ -34,6 +38,8 @@ page-museum {
     border-right-width: 0px;
     padding: 15px 25px 25px 25px;
     color: #a1aab3;
+    overflow-y: auto;
+    text-align: justify;
   }
   .button-units {
     background-color: #b89981;
@@ -41,13 +47,13 @@ page-museum {
   }
   .button-showPrices {
     background-color: transparent;
-     box-shadow: none !important;
-     border-color: rgba(0,0,0,0) !important;
+    box-shadow: none !important;
+    border-color: rgba(0, 0, 0, 0) !important;
     outline: none !important;
-  
-  } .icon-showPrices {
-    color:black;
-      font-size: 20px;
+  }
+  .icon-showPrices {
+    color: black;
+    font-size: 20px;
     padding-bottom: 10px;
   }
   .button-ios.activated {
@@ -64,7 +70,6 @@ page-museum {
     color: #39393c;
     margin-right: 5px;
   }
- 
   .vertical-align {
     align-self: center;
   }
@@ -99,7 +104,6 @@ page-museum {
   .top-header {
     color: #5c6773;
     font-size: 18px;
-    font-weight: 500;
   }
   .top-header-2 {
     color: #b89981;
@@ -107,5 +111,11 @@ page-museum {
   .top-header-3 {
     color: #a1aab3;
     font-size: 14px;
+  }
+  .price-info-icon {
+    margin-left: 5px;
+  }
+  .footer-ios .toolbar-ios:first-child .toolbar-background-ios {
+    border-width: 0px;
   }
 }

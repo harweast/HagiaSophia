@@ -7,11 +7,11 @@
 </ion-header>
 
 <ion-content>
-  <div id="div-outer">
+  <div id="div-outer" ion-fixed>
     <div id="div-image">
       <ion-slides pager>
-        <ion-slide *ngFor="let image of museumInfo.images">
-          <img src="{{ image.source }}" class="slide-image" />
+        <ion-slide *ngFor="let image of museumInfo.Guide.Images">
+          <img src="{{ image }}" class="slide-image" />
         </ion-slide>
       </ion-slides>
     </div>
@@ -19,26 +19,24 @@
       <div id="div-other-info-top">
         <div class="top-header">
           <ion-icon ios="md-map" md="md-map" class="icon-top"></ion-icon>
-          {{ museumInfo.location }}
+          {{ museumInfo.Location }}
         </div>
         <div class="top-header-2">
           <ion-icon ios="md-time" md="md-time" class="icon-top"></ion-icon>
-          {{ museumInfo.openTimes }}
+          {{ museumInfo.OpenHours }}
         </div>
         <div class="top-header-3">
           <ion-icon ios="ios-call" md="ios-call" class="icon-top"></ion-icon>
-          {{ museumInfo.phone }}
+          {{ museumInfo.PhoneNumber }}
         </div>
         <div class="top-header-3">
           <ion-icon ios="ios-pricetag" md="ios-pricetag" class="icon-top"></ion-icon>
-          {{ museumInfo.price }}
-          <button ion-button icon-only (click)="showOtherPrices()" class="button-showPrices">
-          <ion-icon  ios="ios-information-circle-outline" md="ios-information-circle-outline" class="icon-showPrices"></ion-icon>
-          </button>
+          {{ museumInfo.Price }}
+          <ion-icon ios="ios-information-circle-outline" md="ios-information-circle-outline" (click)="showOtherPrices()" class="icon-top price-info-icon"></ion-icon>
         </div>
       </div>
-      <div #museumDescription id="div-description">
-        <!--{{ museumInfo.description }}-->
+      <div id="div-description">
+        {{ museumInfo.Description }}  
       </div>
     </div>
   </div>

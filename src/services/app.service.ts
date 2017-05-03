@@ -13,17 +13,36 @@ export class AppService {
 
   getMuseumInfo() {
     var museumInfo = {
-      images: [
-        { source: "http://ayasofyamuzesi.gov.tr/sites/default/files/1_2_0.png" },
-        { source: "http://i.cdn.ensonhaber.com/resimler/diger/132_435.jpg" },
-        { source: "http://gezipgordum.com/wp-content/uploads/Ayasofya-M%C3%BCzesi-%C4%B0%C3%A7i.jpg?x36515" },
+      Id: 1,
+      Alias: "HAGIA_SOPHIA",
+      Title: "Hagia Sophia",
+      Description: "Ayasofya (Yunanca: Aγία Σοφία, tam adı: Ναός τῆς Ἁγίας τοῦ Θεοῦ Σοφίας, Latince: Sancta Sophia ya da Sancta Sapientia), İstanbul'da tarihî bir müze. Bizans İmparatoru I. Jüstinyen tarafından, 532-537 yılları arasında İstanbul'un tarihi yarımadasındaki eski şehir merkezine inşa ettirilmiş bazilika planlı bir patrik katedrali olup, 1453 yılında İstanbul'un Osmanlılar tarafından alınmasından sonra, Fatih Sultan Mehmet tarafından camiye dönüştürülmüştür. 1935 yılından beri ise müze olarak hizmet vermektedir.[2] Ayasofya, mimari bakımdan, bazilika planı ile merkezî planı birleştiren, kubbeli bazilika tipinde bir yapı olup kubbe geçişi ve taşıyıcı sistem özellikleriyle mimarlık tarihinde önemli bir dönüm noktası olarak ele alınır.",
+      Location: "Sultanahmet Fatih/İSTANBUL",
+      OpenHours: "09:00 - 18:00",
+      Fees: [
+        {
+          Category: "Adult",
+          Amount: 20.0,
+          Currency: "EUR"
+        },
+        {
+          Category: "Student",
+          Amount: 10.0,
+          Currency: "EUR"
+        }
       ],
-      openTimes: "09:00 - 18:00",
-      location: "Sultanahmet Fatih/İSTANBUL",
-      phone: "+90 (212) 522 17 50",
-      price: "40 TL",
-      description: "Ayasofya (Yunanca: Aγία Σοφία, tam adı: Ναός τῆς Ἁγίας τοῦ Θεοῦ Σοφίας, Latince: Sancta Sophia ya da Sancta Sapientia), İstanbul'da tarihî bir müze. Bizans İmparatoru I. Jüstinyen tarafından, 532-537 yılları arasında İstanbul'un tarihi yarımadasındaki eski şehir merkezine inşa ettirilmiş bazilika planlı bir patrik katedrali olup, 1453 yılında İstanbul'un Osmanlılar tarafından alınmasından sonra, Fatih Sultan Mehmet tarafından camiye dönüştürülmüştür. 1935 yılından beri ise müze olarak hizmet vermektedir.[2] Ayasofya, mimari bakımdan, bazilika planı ile merkezî planı birleştiren, kubbeli bazilika tipinde bir yapı olup kubbe geçişi ve taşıyıcı sistem özellikleriyle mimarlık tarihinde önemli bir dönüm noktası olarak ele alınır."
+      PhoneNumber: "+90 (212) 522 17 50", 
+      Price: "40 TL",
+      Guide: {
+        Images: [
+          "http://ayasofyamuzesi.gov.tr/sites/default/files/1_2_0.png",
+          "http://i.cdn.ensonhaber.com/resimler/diger/132_435.jpg",
+          "http://gezipgordum.com/wp-content/uploads/Ayasofya-M%C3%BCzesi-%C4%B0%C3%A7i.jpg?x36515"
+        ],
+        Audio: "www.audio.com"
+      }
     };
+ 
     return museumInfo;
   }
 

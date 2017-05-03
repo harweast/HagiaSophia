@@ -8,12 +8,10 @@
 
 <ion-content>
   <ion-card *ngFor="let unit of units" (click)="goToUnitDetail(unit.id)">
-    <img src="{{ unit.imageUrl }}" />
-    <ion-card-content>
-      <div class="div-container">
-        <span class="unit-name"> {{ unit.unitName }} </span>
-        <span class="unit-floor"> {{ unit.unitFloor }}  </span>
-      </div>
-    </ion-card-content>
+    <div>
+      <img src="{{ unit.imageUrl }}" />
+      <div class="card-title">{{ unit.unitName }}</div>
+      <div class="card-subtitle">{{ unit.unitFloor }}</div>
+    </div>
   </ion-card>
 </ion-content>
