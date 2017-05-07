@@ -1,28 +1,39 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-     {{idParameter}}
+      {{idParameter}}
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content>
-<!--<ion-tabs>
+  <!--<ion-tabs>
   <ion-tab [root]="tabRootGallery" tabTitle="Galeri" tabIcon="home"></ion-tab>
   <ion-tab [root]="tabRootDetail" tabTitle="Detay" tabIcon="information-circle"></ion-tab>
 </ion-tabs>-->
-<page-unitGallery *ngIf="isGalleryVisible"></page-unitGallery>
-<page-unitText *ngIf="!isGalleryVisible"></page-unitText>
+  <page-unitGallery *ngIf="isGalleryVisible"></page-unitGallery>
+  <page-unitText *ngIf="!isGalleryVisible"></page-unitText>
 </ion-content>
 <ion-footer>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="dark">
     <ion-grid>
-    <ion-row id="xx">
-      <ion-col><ion-icon name="play"></ion-icon></ion-col>
-      <ion-col><ion-icon name="pause"></ion-icon></ion-col>
-      <ion-col></ion-col>
-      <ion-col></ion-col>
-      <ion-col><ion-icon [name]="infoToggle" (click)="openDetail()"></ion-icon></ion-col>
-    </ion-row>
+      <ion-row>
+        <ion-col>
+          <progress #playBar [max]="max" [value]="currentValue" style="width:100%;height: 10px;"></progress>
+        </ion-col>
+      </ion-row>
+      <ion-row id="xx">
+        <ion-col>
+          <ion-icon name="play" (click)="play()"></ion-icon>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="pause" (click)="pause()"></ion-icon>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-icon [name]="infoToggle" (click)="openDetail()"></ion-icon>
+        </ion-col>
+      </ion-row>
     </ion-grid>
   </ion-toolbar>
 </ion-footer>

@@ -8,9 +8,9 @@ declare var $: any;
 @Injectable()
 export class AppService {
 
-  constructor() {
+  constructor(private http: Http) {
   }
-
+ 
   getMuseumInfo() {
     var museumInfo = {
       Id: 1,

@@ -5,4 +5,24 @@ page-unit {
     font-size: 4.0em!important;
     color: #eee;
   }
+  progress {
+    display: block;
+    /* default: inline-block */
+    margin: 0px;
+    // padding: 4px;
+    border: 0 none;
+    background: #b89981;
+    // box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  }
+  progress::progress-bar {
+    background: #FFF;
+    box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+  progress::-webkit-progress-bar {
+    background: transparent;
+  }
+  progress::-webkit-progress-value {
+    background: #FFF;
+    box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+  }
 }

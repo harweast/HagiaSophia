@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController,AlertController  } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { UnitsPage } from '../units/units';
 import { AppService } from '../../services/app.service';
 
@@ -10,11 +10,11 @@ import { AppService } from '../../services/app.service';
 export class MuseumPage {
 
   museumInfo: any;
-  constructor(public navCtrl: NavController, 
-  public alertCtrl: AlertController,
-  private appService: AppService,
-  private elRef: ElementRef) {
-    this.museumInfo = appService.getMuseumInfo();
+  constructor(public navCtrl: NavController,
+    public alertCtrl: AlertController,
+    private appService: AppService,
+    private elRef: ElementRef) {
+    this.museumInfo = appService.getMuseumInfo(); 
   }
 
   goToUnits() {
